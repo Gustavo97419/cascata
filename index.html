@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascata, Específidade e Combinadores </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Como funciona a regra da cascata no CSS?</h1>
+    <p>*CSS aplica estilos com base em ordem, especificidade e origem.Sendo assim , tudo que foi escrito no CSS vai ser lido de cima para baixo.</p>
+    <ul>
+        <li>Estilos inline vencem os internos e externos.</li>
+        <li>CSS aplica estilos com base em ordem, especificidade e origem.</li>
+    </ul>
+    <h1>O que é especificidade?</h1>
+    <p>*Determina qual seletor vence em conflitos.Quão especifico ou qual qual a qunatidade de pontos que cada seletor tem.</p>
+    <h1>Valor de seletor</h1>
+    <ul>
+        <li>tag(div,h1)---1 menor peso</li>
+        <li>Classe (.classe), pseudo-classes--- 10 peso medio</li>
+        <li>ID (#id)---100 maior peso </li>
+    </ul>
+
+    <div>
+    <h1>Combinação de Seletores</h1>
+    <ul>
+        <li>.primeiro h1 → Descendente: qualquer h1 dentro de .primeiro, em qualquer nível.</li>
+        <li>.primeira > h1 → Filho direto: h1 que é filho direto de .primeira.</li>
+        <li>.primeira h1 + h1 → Adjacente: h1 que vem logo após outro h1 dentro de .primeira.</li>
+    </ul>
+    </div>
+
+    <h1>Pseudo-classes</h1>
+    <ul>
+        <li> first-child → Primeiro filho de um pai.</li>
+        <li>last-child → Último filho de um pai.</li>
+        <li>:nth-child(n) → N-ésimo filho (ex: :nth-child(3)).</li>
+        <li>nth-of-type(n) → N-ésimo do mesmo tipo de tag.</li>
+    </ul>
+    <div>
+     <h1>display: inline vs display: block</h1>
+     <ul>
+        <li><p>inline: não quebra linha, largura e altura não funcionam, só padding/margin horizontal.</p></li>
+     <li><p>block: quebra linha, aceita largura, altura, margin e padding em todas as direções.</p></li>
+     </ul>
+    </div>
+    <div>
+    <h2>inline</h2>
+    <p id="segundo">span, a, strong, em, img</p>
+    </div>
+
+    <div>
+        <h2>Block</h2>
+        <p id="terceiro">div, p, h1–h6, ul, ol, form, section</p>
+        
+    </div>
+     <h1>margin, padding, border</h1>
+     <p>Usados para espaçamento e contorno:</p>
+     <div>
+     <nav>
+        <ul> 
+            <li>margin: espaço <strong>externo.</strong></li>
+            <li>padding: espaço <strong>interno </strong>(entre conteúdo e borda).</li>
+            <li>border: linha ao redor do elemento.</li>
+        </ul>
+     </nav>
+    </div>
+
+    <h1>Shorthand</h1>
+    <ul>
+        <li>1 valor → todos os lados iguais</li>
+        <li>2 valores → vertical | horizontal </li>
+        <li> 3 valores → top | horizontal | bottom </li>
+        <li> 4 valores → top | right | bottom | left</li>
+    </ul>
+    <h1>Box-sizing</h1>
+   <p> Faz com que padding e border não aumentem o tamanho total do elemento.</p>
+    <div id="quarto">
+        <p id="quinto">border-box</p>
+    </div>
+</body>
+</html>
